@@ -1,0 +1,15 @@
+<ion-card>
+  <ion-card-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="{{post.data.resim}}" />
+      </ion-avatar>
+      <ion-label>{{post.user.username}}</ion-label>
+    </ion-item>
+  </ion-card-header>
+  <img src="{{post.data.resim}}" />
+  
+  <ion-card-content>
+   {{post.data.caption}}
+  </ion-card-content>
+</ion-card>

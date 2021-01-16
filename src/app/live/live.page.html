@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Activity</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="activity-group">
+    <ion-list-header class="list-header-custom">
+      Today
+    </ion-list-header>
+    <ion-row class="activity-item">
+      <ion-col size="auto">
+        <ion-avatar class="avatar-md">
+          <img src="assets/img/avatars/2.jpg" alt="">
+        </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <strong>ironman</strong> started following you.
+        <span class="text-muted"> 6h</span>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-button size="small" color="secondary">
+        	Follow
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="activity-group">
+    <ion-list-header class="list-header-custom">
+      Yesterday
+    </ion-list-header>
+    <ion-row class="activity-item">
+      <ion-col size="auto">
+        <ion-avatar class="avatar-md">
+          <img src="assets/img/avatars/9.jpg" alt="">
+        </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <strong>ironman</strong> started following you.
+        <span class="text-muted"> 1d</span>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-button size="small" color="secondary">
+        	Follow
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="activity-group">
+    <ion-list-header class="list-header-custom">
+      This Week
+    </ion-list-header>
+    <ion-row class="activity-item" *ngFor="let i of [6,7,8,9]">
+      <ion-col size="auto">
+        <ion-avatar class="avatar-md">
+          <img src="assets/img/avatars/{{i}}.jpg" alt="">
+        </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <div>
+          <strong>scarwitch</strong> liked your photo.
+          <span class="text-muted"> 2d</span>
+        </div>
+        <div class="activity-actions text-muted text-sm">
+          <ion-icon name="heart-outline"></ion-icon>
+          <strong>Reply</strong>
+        </div>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-thumbnail class="avatar-md">
+          <img src="assets/img/img_{{i % 4 + 1}}.png" alt="">
+        </ion-thumbnail>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+  
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="goToHome()"  tab="tab1">
+          <ion-icon class="icon-inactive" name="home-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToSearch()" tab="tab2">
+          <ion-icon class="icon-inactive" name="search-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToUpload()" tab="tab3">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToLive()" tab="tab4">
+          <ion-icon class="icon-inactive" name="heart-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToProfile()" tab="tab5">
+          <ion-icon class="icon-inactive" name="person-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    
+  </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

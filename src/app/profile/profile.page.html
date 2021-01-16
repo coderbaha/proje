@@ -1,0 +1,102 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-title>İNSTAGRAM</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-row class="profile-header ion-align-items-center">
+    <ion-col size="auto">
+      <ion-avatar class="avatar-lg has-update has-status">
+        <img src="assets/img/avatars/7.jpg" alt="">
+      </ion-avatar>
+    </ion-col>
+    <ion-col>
+      <ion-row class="profile-stats">
+        <ion-col>
+          <div class="stats-number">1,329</div>
+          <div class="stats-label">Gönderi</div>
+        </ion-col>
+        <ion-col>
+          <div class="stats-number">9,329</div>
+          <div class="stats-label">Takipçi</div>
+        </ion-col>
+        <ion-col>
+          <div class="stats-number">5,329</div>
+          <div class="stats-label">Takip Edilen</div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <div class="ion-padding profile-info">
+    <strong>Bahadır Aşık</strong>
+    <div>
+      Mobil Developer
+    </div>
+    <div>
+    Kocaeli Üniversitesi-Bilgisayar Mühendisi
+    </div>
+  </div>
+
+  <div class="ion-padding">
+    <ion-button expand="block" fill="outline" color="dark" size="small">
+      Profili Düzenle
+    </ion-button>
+  </div>
+
+  <ion-segment value="active">
+    <ion-segment-button value="active">
+      <ion-icon name="grid-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-icon name="earth-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button>
+      <ion-icon name="people-circle-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="post-grid">
+    <ion-row>
+      <ion-col size="4" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]">
+        <div class="post-item bg-image" [style.backgroundImage]="'url(assets/img/img_' + (i % 4 + 1) + '.png)'"></div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+  
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="goToHome()"  tab="tab1">
+          <ion-icon class="icon-inactive" name="home-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToSearch()" tab="tab2">
+          <ion-icon class="icon-inactive" name="search-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToUpload()" tab="tab3">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToLive()" tab="tab4">
+          <ion-icon class="icon-inactive" name="heart-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToProfile()" tab="tab5">
+          <ion-icon class="icon-inactive" name="person-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    
+  </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

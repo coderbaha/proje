@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>upload</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Username</ion-label>
+  <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+  <ion-label>Caption</ion-label>
+  <ion-input type="text" [(ngModel)]="caption" name="caption"></ion-input>
+  <ion-label>Profile Pic</ion-label>
+  <ion-input [(ngModel)]="propic" (change)="newProPic($event)" type="file" style="margin: auto;"></ion-input>
+  <ion-label>Picture</ion-label>
+  <ion-input [(ngModel)]="resim" (change)="newPic($event)" type="file" style="margin: auto;"></ion-input>
+  <ion-button (click)="upload()" color="primary">upload</ion-button> 
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+  
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="goToHome()"  tab="tab1">
+          <ion-icon class="icon-inactive" name="home-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToSearch()" tab="tab2">
+          <ion-icon class="icon-inactive" name="search-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToUpload()" tab="tab3">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToLive()" tab="tab4">
+          <ion-icon class="icon-inactive" name="heart-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="goToProfile()" tab="tab5">
+          <ion-icon class="icon-inactive" name="person-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    
+  </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
