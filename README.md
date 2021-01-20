@@ -21,11 +21,14 @@ Merhabalar, Bu projede ionic ve angular ile instagram uygulaması referans alın
 ![por](https://user-images.githubusercontent.com/62606280/105219740-dcda8680-5b67-11eb-9b3e-e18a1842e6e4.PNG)
 
 Sayfalar arası geçiş yapmak için navigasyon yapısı kullanılmıştır.
-Upload sayfası home sayfasına resim yuklemek için kullanılmıştır. ve ionic service den yararlanılmıştır.
+Upload sayfası home sayfasına resim yuklemek için kullanılmıştır ve ionic service den yararlanılmıştır.
 
- Projeyi çalıştırmak için aşağıdaki adımları izleyin. 
+ Projeyi çalıştırmak için aşağıdaki adımları izleyin.
+ 
 -Projeyi indirin. Komut satırından proje klasörüne gidin. 
+
 -npm install 
+
 -ionic serve
 
 Geliştirici Bahadır Aşık
